@@ -46,7 +46,7 @@ app.post('/put/:key', (req, res) => {
     }
 })
 
-app.post('/set/:key/in/:key2', (req, res) => {
+app.post('/put/:key/in/:key2', (req, res) => {
     const toSetIn = req.params.key;
     const where = req.params.key2;
 
