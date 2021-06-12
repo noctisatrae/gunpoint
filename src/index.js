@@ -26,7 +26,7 @@ app.get('/get/:key', (req, res) => {
     const { key } = req.params;
     
     let toFetch = gun.get(key);
-    toFetch.once((data) => { console.log(data); res.status(200).send({ data:data }) })
+    toFetch.once((data) => { res.status(200).send({ data:data }) })
 });
 
 app.post('/create/:key', (req, res) => {
