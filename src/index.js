@@ -26,9 +26,7 @@ app.get('/get/:key', (req, res) => {
     const { key } = req.params;
     
     let toFetch = gun.get(key);
-    toFetch.on((data) => {
-        res.status(200).send({ msg: `Gunpoint has fetched this: '${key}'`, content: data })
-    })
+    toFetch.once((data) => { console.log(data); res.status(200).send({ data:data }) })
 });
 
 app.post('/create/:key', (req, res) => {
@@ -51,9 +49,7 @@ app.post('/put/:key', (req, res) => {
         let dataFetched;
     
         toFetch.put(dataToAdd)
-        toFetch.on((data) => { 
-            res.status(200).send({success: "YEAH !",dataAdded:dataToAdd, content: data }) 
-        })
+        toFetch.once((data) => { console.log(data); res.status(200).send({ success: "Ouuuya ! The data has been added !", dataAdded:dataToAdd, currentContent: data }) })
     }
 })
 
