@@ -13,8 +13,6 @@ marked.setOptions({
     renderer: new TerminalRenderer()
 })
 
-console.log(marked('# Starting Gunpoint API !'))
-
 const app = express();
 
 app.use(express.json())
@@ -28,10 +26,17 @@ app.get('/get/:key', (req, res) => {
     const { key } = req.params;
     
     let toFetch = gun.get(key);
-
-    toFetch.on((data) => { res.status(200).send({ msg: `Gunpoint has fetched this: '${key}'`, content: data }) })
-
+    toFetch.on((data) => {
+        res.status(200).send({ msg: `Gunpoint has fetched this: '${key}'`, content: data })
+    })
 });
+
+app.post('/create/:key', (req, res) => {
+    const { key } = req.params;
+
+    let toCreate = gun.get(key);
+    res.status(200).send({ msg: `${key} has been successfully created !` })
+})
 
 app.post('/put/:key', (req, res) => {
 
@@ -47,13 +52,18 @@ app.post('/put/:key', (req, res) => {
     
         toFetch.put(dataToAdd)
         toFetch.on((data) => { 
-            res.status(200).json({success: "YEAH !",dataAdded:dataToAdd, content: data }) 
+            res.status(200).send({success: "YEAH !",dataAdded:dataToAdd, content: data }) 
         })
     }
 })
 
-app.post('/debug/:param', (req, res) => {
-    res.json(req.body);
+app.post('/set/:key/in/:key2', (req, res) => {
+    const toSetIn = req.params.key;
+    const where = req.params.key2;
+
+    gun.get(where).set(toSetIn);
+    res.status(200).send({ success: `${toSetIn} has been successfully put in ${where} !` })
 })
 
+console.log(marked('# Starting Gunpoint API !'))
 app.listen(PORT, () => { console.log(marked('**Gunpoint is running at http://localhost:' + PORT + '**')) })
