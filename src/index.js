@@ -49,7 +49,7 @@ app.post('/put/:key', (req, res) => {
         let dataFetched;
     
         toFetch.put(dataToAdd)
-        toFetch.once((data) => { console.log(data); res.status(200).send({ success: "Ouuuya ! The data has been added !", dataAdded:dataToAdd, currentContent: data }) })
+        toFetch.once((data) => { res.status(200).send({ success: "Ouuuya ! The data has been added !", dataAdded:dataToAdd, currentContent: data }) })
     }
 })
 
