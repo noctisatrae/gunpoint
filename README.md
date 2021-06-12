@@ -1,5 +1,8 @@
 # Gunpoint API
-Gunpoint is a restful API for [Gun](https://github.com/amark/gun). 
+Gunpoint is a restful API for [Gun](https://github.com/amark/gun). You can fire it up with :
+```sh
+npm run start
+```
 
 ## What you can do, currently :
 `/get/[key]`: Use it to get data from a definied graph (`GET` request). \
