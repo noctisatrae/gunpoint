@@ -29,13 +29,6 @@ app.get('/get/:key', (req, res) => {
     toFetch.once((data) => { res.status(200).send({ data:data }) })
 });
 
-app.post('/create/:key', (req, res) => {
-    const { key } = req.params;
-
-    let toCreate = gun.get(key);
-    res.status(200).send({ msg: `${key} has been successfully created !` })
-})
-
 app.post('/put/:key', (req, res) => {
 
     const { key } = req.params;
