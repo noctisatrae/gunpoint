@@ -1,6 +1,7 @@
 const express = require('express');
 const marked = require('marked');
 const Gun = require('gun');
+const path = require('gun/lib/path');
 const TerminalRenderer = require('marked-terminal');
 
 const config = require('../config.json');
@@ -52,6 +53,15 @@ app.post('/put/:key/in/:key2', (req, res) => {
 
     gun.get(where).set(toSetIn);
     res.status(200).send({ success: `${toSetIn} has been successfully put in ${where} !` })
+})
+
+app.delete('/delete/:data/in/:key', (req, res) => {
+    const toDelete = req.params.data;
+    const where = req.params.key;
+
+    const whereIsTheData = gun.get(where);
+    whereIsTheData.path(toDelete).put(null);
+    res.status(200).send({ success: `${toDelete} has been successfully deleted in ${where} !` })
 })
 
 console.log(marked('# Starting Gunpoint API !'))
