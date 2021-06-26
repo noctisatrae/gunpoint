@@ -4,7 +4,7 @@ const Gun = require('gun');
 const path = require('gun/lib/path');
 const TerminalRenderer = require('marked-terminal');
 
-const PORT = config.port;
+const PORT = process.env.PORT || 3000
 
 const gun = Gun();
 
