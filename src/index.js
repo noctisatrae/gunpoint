@@ -4,8 +4,6 @@ const Gun = require('gun');
 const path = require('gun/lib/path');
 const TerminalRenderer = require('marked-terminal');
 
-const config = require('../config.json');
-
 const PORT = config.port;
 
 const gun = Gun();
