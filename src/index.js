@@ -5,7 +5,7 @@ const TerminalRenderer = require('marked-terminal');
 
 const config = require('../config.json');
 
-const PORT = config.port;
+const PORT = process.env.PORT || 3000;
 
 const gun = Gun();
 
