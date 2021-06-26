@@ -37,7 +37,7 @@ app.post('/put/:key', (req, res) => {
 
     if (!dataToAdd) {
         console.log("No data !");
-        res.status(418).sendFile({ error: "There's no data in your request !" })
+        res.status(418).send({ error: "There's no data in your request !" })
     } else {
         let toFetch = gun.get(key);
         let dataFetched;
