@@ -1,7 +1,6 @@
 const express = require('express');
 const marked = require('marked');
 const Gun = require('gun');
-const path = require('gun/lib/path');
 const TerminalRenderer = require('marked-terminal');
 
 const PORT = process.env.PORT || 3000
