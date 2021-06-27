@@ -58,7 +58,7 @@ app.delete('/delete/:data/in/:key', (req, res) => {
     const where = req.params.key;
 
     const whereIsTheData = gun.get(where);
-    whereIsTheData.path(toDelete).put(null);
+    whereIsTheData.get(toDelete).put(null);
     res.status(200).send({ success: `${toDelete} has been successfully deleted in ${where} !` })
 })
 
