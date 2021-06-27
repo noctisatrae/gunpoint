@@ -5,13 +5,12 @@ const TerminalRenderer = require('marked-terminal');
 
 const PORT = process.env.PORT || 3000
 
-const gun = Gun();
-
 marked.setOptions({
     renderer: new TerminalRenderer()
 })
 
 const app = express();
+const gun = Gun({ web: app });
 
 app.use(express.json())
 
