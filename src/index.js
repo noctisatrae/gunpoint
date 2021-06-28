@@ -13,20 +13,11 @@ marked.setOptions({
 const app = express();
 const gun = Gun({ web: app });
 
+app.use(Gun.serve)
 app.use(express.json())
 
 app.get('/', (req, res) => {
     res.status(200).send({ msg: "Welcome to Gunpoint API !" })
-})
-
-app.get('/gun', (req, res) => {
-    readFile('src/gun.min.js', 'utf-8', (err, js) => {
-        if (err) {
-            res.status(500).send(err)
-        }
-
-        res.status(200).send({js});
-    })
 })
 
 app.get('/get/:key', (req, res) => {
