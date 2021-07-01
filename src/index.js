@@ -2,7 +2,6 @@ const express = require('express');
 const marked = require('marked');
 const Gun = require('gun');
 const TerminalRenderer = require('marked-terminal');
-const { readFile, read } = require('fs');
 
 const PORT = process.env.PORT || 3000
 
