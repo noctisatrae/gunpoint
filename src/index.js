@@ -3,14 +3,20 @@ const marked = require('marked');
 const Gun = require('gun');
 const TerminalRenderer = require('marked-terminal');
 
-const PORT = process.env.PORT || 3000
+const { port } = require('./config.json');
+
+const PORT = process.env.PORT || port
 
 marked.setOptions({
     renderer: new TerminalRenderer()
 })
 
 const app = express();
-const gun = Gun({ web: app });
+
+console.log(marked('# Starting Gunpoint API !'))
+const gun = Gun({ 
+  web: app.listen(PORT, () => { console.log(marked('**Gunpoint is running at http://localhost:' + PORT + '**')) })
+});
 
 app.use(Gun.serve)
 app.use(express.json())
@@ -60,6 +66,3 @@ app.delete('/delete/:data/in/:key', (req, res) => {
     whereIsTheData.get(toDelete).put(null);
     res.status(200).send({ success: `${toDelete} has been successfully deleted in ${where} !` })
 })
-
-console.log(marked('# Starting Gunpoint API !'))
-app.listen(PORT, () => { console.log(marked('**Gunpoint is running at http://localhost:' + PORT + '**')) })
