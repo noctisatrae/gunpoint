@@ -1,3 +1,6 @@
 FROM node:latest
 
-RUN npm install && npm start
+ADD .
+
+RUN npm install
+RUN npm start
