@@ -1,6 +1,12 @@
 FROM node:latest
+WORKDIR /api
 
-ADD .
+COPY package.*.json ./
 
 RUN npm install
-RUN npm start
+
+COPY . . 
+ENV PORT=4978
+EXPOSE 4978
+
+CMD ["npm", "start']
