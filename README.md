@@ -4,6 +4,21 @@ Gunpoint is a restful API for [Gun](https://github.com/amark/gun). You can fire 
 npm run start
 ```
 
+Instead of downloading it, you can use the Docker package by using :
+```sh
+docker pull ghcr.io/noctisatrae/gunpoint:master
+```
+\
+If you want to try Gunpoint, [it's here !](https://gunpoint.herokuapp.com) (Main playground running latest release) \
+If you want to test the new features,[ click here !](https://gunpoint-dev.herokuapp.com) (Devlopment playground) \
+\
+**By the way, take a look at what's comming next :**
+- - [ ] Websocket support
+- - [ ] GraphQL URI 
+- - [ ] Redis compatibility
+- - [ ] Support for arrays in JS Object
+- - [X] Docker image with CI on `master` branch
+
 ## What you can do, currently :
 `/get/[key]`: Use it to get data from a definied graph (`GET` request). \
 `/put/[key] + request body (in JSON)`: Add data in a specified graph (`POST` request). \
