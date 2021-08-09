@@ -1,4 +1,6 @@
 # Gunpoint API
+![Docker ?](https://github.com/noctisatrae/gunpoint/actions/workflows/docker-publish.yml/badge.svg) ![Issues ?](https://img.shields.io/github/issues/noctisatrae/gunpoint) ![Stars ?](https://img.shields.io/github/stars/noctisatrae/gunpoint) ![Forks ?](https://img.shields.io/github/forks/noctisatrae/gunpoint) \
+\
 Gunpoint is a restful API for [Gun](https://github.com/amark/gun). You can fire it up with :
 ```sh
 npm run start
@@ -16,6 +18,7 @@ If you want to test the new features,[ click here !](https://gunpoint-dev.heroku
 - - [ ] Websocket support
 - - [ ] GraphQL URI 
 - - [ ] Redis compatibility
+- - [ ] A `/set` URI using `gun.set()`
 - - [ ] Support for arrays in JS Object
 - - [X] Docker image with CI on `master` branch
 
