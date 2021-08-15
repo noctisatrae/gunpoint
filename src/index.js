@@ -3,7 +3,7 @@ const marked = require('marked');
 const Gun = require('gun');
 const TerminalRenderer = require('marked-terminal');
 
-const { port } = require('./config.json');
+const { port, options } = require('./config.json');
 
 const PORT = process.env.PORT || port
 
@@ -13,13 +13,22 @@ marked.setOptions({
 
 const app = express();
 
-console.log(marked('# Starting Gunpoint API !'))
-const gun = Gun({ 
-  web: app.listen(PORT, () => { console.log(marked('**Gunpoint is running at http://localhost:' + PORT + '**')) })
-});
-
 app.use(Gun.serve)
 app.use(express.json())
+
+console.log(marked('# Starting Gunpoint API !'))
+
+let gun;
+if(options.peers.length === 0) {
+  gun = Gun({ 
+    web: app.listen(PORT, () => { console.log(marked('**Gunpoint is running at http://localhost:' + PORT + '**')) })
+  });
+} else if (options.peers.length > 0) {
+  gun = Gun({ 
+    peers: options.peers,
+    web: app.listen(PORT, () => { console.log(marked('**Gunpoint is running at http://localhost:' + PORT + '**')) })
+  });
+}
 
 app.get('/', (req, res) => {
     res.status(200).send({ msg: "Welcome to Gunpoint API !" })
