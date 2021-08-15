@@ -1,3 +1,6 @@
 {
-  "port": 4397
+  "port": 4397,
+  "options": {
+    "peers": []
+  }
 }
