@@ -20,6 +20,7 @@ If you want to test the new features,[ click here !](https://gunpoint-dev.heroku
 - - [ ] Redis compatibility
 - - [ ] A `/set` URI using `gun.set()`
 - - [ ] Support for arrays in JS Object
+- - [ ] Be able to configure Gun with config.json
 - - [X] Docker image with CI on `master` branch
 
 ## What you can do, currently :
