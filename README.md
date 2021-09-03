@@ -17,7 +17,6 @@ If you want to test the new features,[ click here !](https://gunpoint-dev.heroku
 **By the way, take a look at what's comming next :**
 - - [ ] Websocket support
 - - [ ] GraphQL URI 
-- - [ ] Redis compatibility
 - - [ ] A `/set` URI using `gun.set()`
 - - [ ] Be able to submit array (array to JS Object function)
 - - [X] Be able to configure Gun with `config.json`
