@@ -1,5 +1,5 @@
 const express = require('express');
-const marked = require('marked');
+const {marked} = require('marked');
 const Gun = require('gun');
 const TerminalRenderer = require('marked-terminal');
 
