@@ -14,7 +14,6 @@ docker pull ghcr.io/noctisatrae/gunpoint:master
 ```
 \
 If you want to try Gunpoint, [it's here !](https://gunpoint.herokuapp.com) (Main playground running latest release) \
-If you want to test the new features,[ click here !](https://gunpoint-dev.herokuapp.com) (Devlopment playground) \
 \
 **By the way, take a look at what's comming next :**
 - - [ ] A `/set` URI using `gun.set()`
