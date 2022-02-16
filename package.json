@@ -7,6 +7,7 @@
     "start": "node ./src/index.js",
     "test": "node ./src/test.js"
   },
+  "bin":"./src/index.js",
   "keywords": [
     "api",
     "gun",
