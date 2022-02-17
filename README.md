@@ -7,8 +7,9 @@ You can fire it up with :
 ```sh
 npm run start
 ```
+or use `npx gunpoint` to instantly create a supercharged relay !
 
-Instead of downloading it, you can use the Docker package by using :
+You can also use the Docker package by using :
 ```sh
 docker pull ghcr.io/noctisatrae/gunpoint:master
 ```
@@ -16,11 +17,13 @@ docker pull ghcr.io/noctisatrae/gunpoint:master
 If you want to try Gunpoint, [it's here !](https://gunpoint.herokuapp.com) (Main playground running latest release) \
 \
 **By the way, take a look at what's comming next :**
-- - [ ] A `/set` URI using `gun.set()`
-- - [ ] Be able to submit array (array to JS Object function)
-- - [ ] Redis caching support
-- - [X] Be able to configure Gun with `config.json`
-- - [X] Docker image with CI on `master` branch
+
+- [ ] A `/set` URI using `gun.set()`
+- [ ] Be able to submit array (array to JS Object function)
+- [ ] Redis caching support
+- [ ] Improve CLI tool !
+- [X] Be able to configure Gun with `config.json`
+- [X] Docker image with CI on `master` branch
 
 ## What you can do, currently :
 `/get/[key]`: Use it to get data from a definied graph (`GET` request). \
