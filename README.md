@@ -21,7 +21,9 @@ If you want to try Gunpoint, [it's here !](https://gunpoint.herokuapp.com) (Main
 - [ ] A `/set` URI using `gun.set()`
 - [ ] Be able to submit array (array to JS Object function)
 - [ ] Redis caching support
-- [ ] Improve CLI tool !
+- [ ] Improve CLI !
+- - [ ] Find another way to make gunpoint beautiful !
+- - [ ] Support passing args in command line.
 - [X] Be able to configure Gun with `config.json`
 - [X] Docker image with CI on `master` branch
 
