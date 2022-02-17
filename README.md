@@ -14,7 +14,7 @@ You can also use the Docker package :
 ```sh
 docker pull ghcr.io/noctisatrae/gunpoint:master
 ```
-\
+
 If you want to try Gunpoint, [it's here !](https://gunpoint.herokuapp.com) (Main playground running latest release) \
 \
 **By the way, take a look at what's comming next :**
