@@ -9,7 +9,7 @@ npm run start
 ```
 or use `npx gunpoint` to instantly create a supercharged relay !
 
-You can also use the Docker package by using :
+You can also use the Docker package :
 ```sh
 docker pull ghcr.io/noctisatrae/gunpoint:master
 ```
