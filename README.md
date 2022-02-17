@@ -1,3 +1,4 @@
+![Logo](./gunpoint_banner.png)
 # Gunpoint API
 Gunpoint is a restful API for [gun.js](https://github.com/amark/gun). 
 
