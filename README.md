@@ -2,7 +2,7 @@
 # Gunpoint API
 Gunpoint is a restful API for [gun.js](https://github.com/amark/gun). 
 
-![Docker ?](https://github.com/noctisatrae/gunpoint/actions/workflows/docker-publish.yml/badge.svg) ![NPM Version ?](https://img.shields.io/npm/v/gunpoint) ![Issues ?](https://img.shields.io/github/issues/noctisatrae/gunpoint) ![Stars ?](https://img.shields.io/github/stars/noctisatrae/gunpoint) ![Forks ?](https://img.shields.io/github/forks/noctisatrae/gunpoint) 
+![Docker ?](https://github.com/noctisatrae/gunpoint/actions/workflows/docker-publish.yml/badge.svg) ![NPM Version ?](https://img.shields.io/npm/v/gunpoint) ![Issues ?](https://img.shields.io/github/issues/noctisatrae/gunpoint) ![Stars ?](https://img.shields.io/github/stars/noctisatrae/gunpoint)
 
 You can fire it up with :
 ```sh
