@@ -9,4 +9,4 @@ COPY . .
 ENV PORT=4978
 EXPOSE 4978
 
-CMD ["npm", "start']
+CMD ["npm", "start"]
